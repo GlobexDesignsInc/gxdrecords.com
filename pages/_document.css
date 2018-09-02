@@ -1,0 +1,12 @@
+:global body {
+	background: #04070B;
+	color: #FFF;
+	display: flex;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
