@@ -6,7 +6,6 @@ export type ReleaseType = {
 	artist: string,
 	buy: {
 		[key: StoreType]: {
-			price: string,
 			url: string,
 		},
 	},
@@ -40,15 +39,12 @@ const releases: ReleasesType = [{
 	buy: {
 		Beatport: {
 			url: 'http://www.beatport.com/release/moving-forward/883056',
-			price: '9.99',
 		},
 		iTunes: {
-			url: 'http://itunes.apple.com/ca/artist/evgueni-naverniouk/id409163130',
-			price: '9.99',
+			url: 'https://itunes.apple.com/ca/album/moving-forward/1227264741',
 		},
 		Amazon: {
-			url: 'http://www.amazon.com/Moving-Forward/dp/B0089WSSMS/ref=sr_1_2?s=music&ie=UTF8&qid=1341103558&sr=1-2&keywords=naverniouk',
-			price: '7.92',
+			url: 'https://www.amazon.com/Moving-Forward-Evgueni-Naverniouk/dp/B06ZY82ZQN',
 		},
 	},
 }, {
@@ -65,15 +61,12 @@ const releases: ReleasesType = [{
 	buy: {
 		Beatport: {
 			url: 'http://www.beatport.com/release/pandemic-2-5-soundtrack/911464',
-			price: '5.97',
 		},
 		iTunes: {
 			url: 'http://itunes.apple.com/ca/album/pandemic-2.5-soundtrack-ep/id525558248',
-			price: '2.97',
 		},
 		Amazon: {
-			url: 'http://www.amazon.com/Pandemic-2-5-Soundtrack/dp/B008E8C33M/ref=sr_1_1?s=music&ie=UTF8&qid=1341103558&sr=1-1&keywords=naverniouk',
-			price: '2.97',
+			url: 'https://www.amazon.com/Pandemic-2-5-Soundtrack-Evgueni-Naverniouk/dp/B071R493S3/',
 		},
 	},
 }];

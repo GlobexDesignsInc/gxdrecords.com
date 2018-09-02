@@ -5,8 +5,7 @@ const Deploy = require('@globexdesigns/deploy');
 const D = new Deploy({
 	directories: ['.next', 'static'],
 	files: ['package.json', 'server.js', 'yarn.lock'],
-	// TODO
-	// host: '138.68.241.10',
+	host: '159.89.129.218',
 	private_key_path: '/home/globex/.ssh/id_rsa',
 	target_dir: '/var/www',
 	user: 'root',

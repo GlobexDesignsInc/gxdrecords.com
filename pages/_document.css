@@ -10,3 +10,7 @@
 	padding: 0;
 	width: 100%;
 }
+
+:global strong {
+	font-weight: 400;
+}

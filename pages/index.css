@@ -14,8 +14,8 @@
 .header {
 	align-items: center;
 	display: flex;
+	flex: 0 0 165px;
 	justify-content: center;
-	height: 165px;
 	margin: 32px 0;
 }
 

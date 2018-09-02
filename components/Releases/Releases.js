@@ -13,32 +13,33 @@ export default class Releases extends PureComponent<PropsType> {
 		return (
 			<Fragment>
 				<h2 className={styles.title}>Releases</h2>
-				{releases.map((
+				{releases.reverse().map((
 					release: ReleaseType,
 					releaseIndex: number
 				): Element<'div'> => (
-					<div className={styles.release} key={releaseIndex}>
+					<div className={styles.release} key={release.catalog}>
 						<div className={styles.left}>
-							<div className={styles.cover}>
-								<img
-									alt={`${release.artist} - ${release.title}`}
-									height='320'
-									src={`/static/releases/${release.catalog}.jpg`}
-									width='320' />
-							</div>
+							<img
+								alt={`${release.artist} - ${release.title}`}
+								height='320'
+								src={`/static/releases/${release.catalog}.jpg`}
+								width='320' />
 
-							{Object.keys(release.buy).map((
-								buy: StoreType
-							): Element<'a'> => (
-								<a
-									className={styles.button}
-									href={release.buy[buy].url}
-									key={buy}
-									title={`Buy on ${buy}`}>
-									Buy on {buy}<br />
-									{release.buy[buy].price}
-								</a>
-							))}
+							<div className={styles.stores}>
+								{Object.keys(release.buy).map((
+									buy: StoreType
+								): Element<'a'> => (
+									<a
+										className={styles.button}
+										href={release.buy[buy].url}
+										key={buy}
+										rel='noopener noreferrer'
+										target='_blank'
+										title={`Buy on ${buy}`}>
+										Buy on <strong>{buy}</strong>
+									</a>
+								))}
+							</div>
 						</div>
 						<div className={styles.right}>
 							<h3
@@ -48,27 +49,25 @@ export default class Releases extends PureComponent<PropsType> {
 							</h3>
 
 							<p className={styles.details}>
-								<strong>Catalog:</strong> {release.catalog} <span className={styles.vr}>|</span> <strong>Released:</strong> {release.date}
+								<strong>Catalog:</strong> {release.catalog}
+								<span className={styles.vr}>|</span>
+								<strong>Released:</strong> {release.date}
 							</p>
 
-							<table className='tablelist'>
+							<table className={styles.tracks}>
 								<tbody>
 									{Object.keys(release.tracks).map((
 										trackName: string,
 										i: number
 									): Element<'tr'> => (
-										<tr className={i % 2 ? styles.alt : null} key={i}>
+										<tr
+											className={i % 2 ? styles.trackAlt : styles.track}
+											key={i}>
 											<td className={styles.trackNumber}>
-												<div>
-													<span>{i + 1}</span>
-												</div>
+												{i + 1}
 											</td>
-											<td className={styles.trackName}>
-												{trackName}
-											</td>
-											<td className={styles.trackDuration}>
-												{release.tracks[trackName]}
-											</td>
+											<td>{trackName}</td>
+											<td>{release.tracks[trackName]}</td>
 										</tr>
 									))}
 								</tbody>

@@ -1,5 +1,5 @@
 .title {
-	border-bottom: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(0,198,164,0.2);
 	color: #00C6A4;
 	font-size: 32px;
 	font-weight: 300;
@@ -7,13 +7,51 @@
 }
 
 .release {
+	border-bottom: 1px solid rgba(0,198,164,0.2);
 	display: flex;
+	margin-bottom: 16px;
 	padding: 16px 0;
+	width: 100%;
 }
 
 .left {
 	flex: 0 0 320px;
 	margin-right: 16px;
+}
+
+.stores {
+	margin-top: 16px;
+}
+
+.button {
+	background: #005763;
+	border-bottom: 1px solid transparent;
+	border-top: 1px solid #6FDADD;
+	border-radius: 3px;
+	color: #FFF;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 8px;
+	padding: 8px 18px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: #000 0 1px 1px;
+}
+
+.button:focus,
+.button:hover {
+	background: #07626F;
+	border-top: 1px solid #7FEAED;
+}
+
+.button:active {
+	background: #07626f;
+	border-bottom: 1px solid #097180;
+	border-top: 1px solid transparent;
+}
+
+.right {
+	flex: 1 1 auto;
 }
 
 .releaseName {
@@ -23,6 +61,33 @@
 	margin: 0;
 }
 
-.releaseName strong {
-	font-weight: 400;
+.details {
+	margin: 8px 0 24px;
+}
+
+.vr {
+	color: #006874;
+	padding: 0 8px;
+}
+
+.tracks {
+	border-spacing: 0;
+	width: 100%;
+}
+
+.track,
+.trackAlt {
+	height: 40px;
+}
+
+.trackAlt {
+	background: rgba(0, 90, 103, 0.1);
+}
+
+.trackNumber {
+	color: #005A67;
+	font-size: 24px;
+	padding: 0 8px 0 0;
+	text-align: right;
+	width: 32px;
 }
