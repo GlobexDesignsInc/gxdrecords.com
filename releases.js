@@ -18,9 +18,7 @@ export type ReleaseType = {
 	type: string,
 };
 
-export type ReleasesType = Array<ReleaseType>;
-
-const releases: ReleasesType = [{
+const releases: Array<ReleaseType> = [{
 	artist: 'Evgueni Naverniouk',
 	catalog: 'GXD0001',
 	title: 'Moving Forward',
@@ -69,6 +67,6 @@ const releases: ReleasesType = [{
 			url: 'https://www.amazon.com/Pandemic-2-5-Soundtrack-Evgueni-Naverniouk/dp/B071R493S3/',
 		},
 	},
-}];
+}].reverse();
 
 export default releases;

@@ -13,9 +13,8 @@ export default class Releases extends PureComponent<PropsType> {
 		return (
 			<Fragment>
 				<h2 className={styles.title}>Releases</h2>
-				{releases.reverse().map((
-					release: ReleaseType,
-					releaseIndex: number
+				{releases.map((
+					release: ReleaseType
 				): Element<'div'> => (
 					<div className={styles.release} key={release.catalog}>
 						<div className={styles.left}>
