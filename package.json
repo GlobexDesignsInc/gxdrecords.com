@@ -1,31 +1,32 @@
 {
 	"name": "gxdrecords.com",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"license": "MIT",
 	"scripts": {
 		"build": "next build",
-		"deploy": "yarn build && node scripts/deploy.js",
+		"deploy": "yarn build && deploy run -v",
 		"dev": "node server.js",
-		"eslint": "eslint-cumul8 scripts src",
+		"eslint": "eslint-cumul8 components pages utils *.js",
 		"flow": "flow",
-		"flow-typed:update": "flow-typed update --ignoreDeps dev",
+		"flow-typed:update": "rm -rf flow-typed && flow-typed install --ignoreDeps dev",
 		"start": "NODE_ENV=production node server.js",
 		"test": "yarn flow && yarn eslint"
 	},
 	"dependencies": {
-		"@zeit/next-css": "0.2.1-canary.2",
-		"express": "4.16.3",
-		"greenlock-express": "2.4.6",
-		"next": "7.0.0-canary.8",
-		"react": "16.4.2",
-		"react-dom": "16.4.2",
-		"react-ga": "2.5.3"
+		"@zeit/next-css": "1.0.1",
+		"express": "4.16.4",
+		"greenlock-express": "2.7.6",
+		"next": "8.1.0",
+		"react": "16.8.6",
+		"react-dom": "16.8.6",
+		"react-ga": "2.5.7",
+		"react-helmet": "5.2.1"
 	},
 	"devDependencies": {
 		"@babel/preset-flow": "7.0.0",
-		"@globexdesigns/deploy": "0.2.5",
-		"eslint-config-cumul8": "8.0.0",
-		"flow-bin": "0.80.0",
+		"@globexdesigns/deploy": "0.3.9",
+		"eslint-config-cumul8": "8.0.50",
+		"flow-bin": "0.98.1",
 		"flow-typed": "2.5.1"
 	}
 }

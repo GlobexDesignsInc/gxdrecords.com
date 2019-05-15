@@ -1,0 +1,13 @@
+{
+	host: '159.65.99.81',
+	private_key_path: '/home/globex/.ssh/id_rsa',
+	sources: [
+		'.next',
+		'static',
+		'package.json',
+		'server.js',
+		'yarn.lock'
+	],
+	target_dir: '/var/www/gxdrecords.com',
+	user: 'root',
+}

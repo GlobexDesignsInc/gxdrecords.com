@@ -2,6 +2,8 @@
 
 components
 pages
+utils
+releases.js
 
 [lints]
 
