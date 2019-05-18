@@ -7,7 +7,7 @@ releases.js
 
 [lints]
 
-deprecated-call-syntax=off
+deprecated-utility=off
 
 [options]
 
