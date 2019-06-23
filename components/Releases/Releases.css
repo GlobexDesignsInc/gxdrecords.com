@@ -1,5 +1,5 @@
 .title {
-	border-bottom: 1px solid rgba(0,198,164,0.2);
+	border-bottom: 1px solid rgba(0, 198, 164, 0.2);
 	color: #00C6A4;
 	font-size: 32px;
 	font-weight: 300;
@@ -7,7 +7,7 @@
 }
 
 .release {
-	border-bottom: 1px solid rgba(0,198,164,0.2);
+	border-bottom: 1px solid rgba(0, 198, 164, 0.2);
 	display: flex;
 	margin-bottom: 16px;
 	padding: 16px 0;
@@ -26,8 +26,8 @@
 .button {
 	background: #005763;
 	border-bottom: 1px solid transparent;
-	border-top: 1px solid #6FDADD;
 	border-radius: 3px;
+	border-top: 1px solid #6FDADD;
 	color: #FFF;
 	cursor: pointer;
 	display: block;
@@ -45,7 +45,7 @@
 }
 
 .button:active {
-	background: #07626f;
+	background: #07626F;
 	border-bottom: 1px solid #097180;
 	border-top: 1px solid transparent;
 }
