@@ -4,6 +4,10 @@
 		"eslint-globex . --fix",
 		"git add"
 	],
+	"*.css": [
+		"stylelint-globex --fix",
+		"git add"
+	],
 	"package.json": [
 		"prettier-package-json --use-tabs --write ./package.json",
 		"git add"
