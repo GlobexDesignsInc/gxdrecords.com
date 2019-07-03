@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 
 import React, {type Element, Fragment, memo} from 'react';
 import releases, {type ReleaseType, type StoreType} from '../../releases';
