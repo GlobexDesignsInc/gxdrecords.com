@@ -4,7 +4,7 @@
 	"version": "0.3.0",
 	"scripts": {
 		"build": "next build",
-		"deploy": "yarn build && rocketry run --debug",
+		"deploy": "yarn build && rocketry run",
 		"dev": "node start.js",
 		"eslint": "eslint-globex .",
 		"flow": "flow",
