@@ -1,5 +1,7 @@
 # gxdrecords.com
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/GlobexDesignsInc/gxdrecords.com.svg)](https://greenkeeper.io/)
+
 > The official website for the GXD Records music label
 
 - Built with `nextjs`
