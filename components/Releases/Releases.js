@@ -21,17 +21,22 @@ export const Releases = (): Element<typeof Fragment> => (
 					<div className={styles.stores}>
 						{Object.keys(release.buy).map((
 							buy: StoreType
-						): Element<'a'> => (
-							<a
-								className={styles.button}
-								href={release.buy[buy].url}
-								key={buy}
-								rel='noopener noreferrer'
-								target='_blank'
-								title={`Buy on ${buy}`}>
-								Buy on <strong>{buy}</strong>
-							</a>
-						))}
+						): Element<'a'> => {
+							const action = buy === 'Spotify' ? 'Stream' : 'Buy';
+							const title = `${action} on ${buy}`;
+
+							return (
+								<a
+									className={styles.button}
+									href={release.buy[buy].url}
+									key={buy}
+									rel='noopener noreferrer'
+									target='_blank'
+									title={title}>
+									{action} on <strong>{buy}</strong>
+								</a>
+							);
+						})}
 					</div>
 				</div>
 				<div className={styles.right}>
