@@ -1,5 +1,5 @@
-/* stylelint-disable-next-line selector-max-combinators, selector-max-type */
-:global body {
+/* stylelint-disable-next-line selector-max-type */
+body {
 	background: #04070B;
 	color: #FFF;
 	display: flex;
@@ -12,7 +12,7 @@
 	width: 100%;
 }
 
-/* stylelint-disable-next-line selector-max-combinators, selector-max-type */
-:global strong {
+/* stylelint-disable-next-line selector-max-type */
+strong {
 	font-weight: 400;
 }

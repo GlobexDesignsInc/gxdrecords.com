@@ -2,14 +2,14 @@
 
 import React, {type Element} from 'react';
 import Releases from '../components/Releases';
-import styles from './index.css';
+import styles from './index.module.css';
 
 const index = (): Element<'div'> => (
 	<div className={styles.view}>
 		<div className={styles.header}>
 			<img
 				alt='GXD Records'
-				src='/static/logo.png' />
+				src='/logo.png' />
 		</div>
 		<div className={styles.content}>
 			<Releases />

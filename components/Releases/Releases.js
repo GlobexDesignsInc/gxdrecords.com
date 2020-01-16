@@ -1,8 +1,8 @@
 // @flow strict
 
-import React, {type Element, Fragment, memo} from 'react';
+import React, {type Element, Fragment} from 'react';
 import releases, {type ReleaseType, type StoreType} from '../../releases';
-import styles from './Releases.css';
+import styles from './Releases.module.css';
 
 export const Releases = (): Element<typeof Fragment> => (
 	<Fragment>
@@ -15,7 +15,7 @@ export const Releases = (): Element<typeof Fragment> => (
 					<img
 						alt={`${release.artist} - ${release.title}`}
 						height='320'
-						src={`/static/releases/${release.catalog}.jpg`}
+						src={`/releases/${release.catalog}.jpg`}
 						width='320' />
 
 					<div className={styles.stores}>
@@ -78,4 +78,4 @@ export const Releases = (): Element<typeof Fragment> => (
 
 Releases.displayName = 'Releases';
 
-export default memo<{||}>(Releases);
+export default Releases;
