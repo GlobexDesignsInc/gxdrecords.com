@@ -114,6 +114,30 @@ const releases: Array<ReleaseType> = [{
 			url: 'https://www.amazon.com/Kingdom-Keeper-Original-Game-Soundtrack/dp/B07X6JKQ43',
 		},
 	},
+}, {
+	artist: 'Evgueni Naverniouk',
+	catalog: 'GXD0005',
+	title: 'Pandemic 2 (Original Game Soundtrack)',
+	type: 'ep',
+	date: '2020-01-22',
+	tracks: {
+		'Main Theme': '02:12',
+		Evacuation: '00:45',
+		Fade: '00:02',
+		'Meaty Weeds': '00:06',
+		'Evacuation [Heavy Mix]': '00:45',
+	},
+	buy: {
+		Spotify: {
+			url: 'https://open.spotify.com/album/0v86b9xgHftIkQ7QiZj4IZ',
+		},
+		iTunes: {
+			url: 'https://music.apple.com/ca/album/pandemic-2-original-game-soundtrack-ep/1495855911',
+		},
+		Amazon: {
+			url: 'https://www.amazon.com/Pandemic-2-Original-Game-Soundtrack/dp/B0842Y2SP3',
+		},
+	},
 }].reverse();
 
 export default releases;
