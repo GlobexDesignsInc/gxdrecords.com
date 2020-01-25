@@ -2,15 +2,14 @@
 
 /* eslint-disable react/jsx-props-no-spreading */
 
-import Document, {Head, Main, NextScript} from 'next/document';
+import Document, {type DocumentContext, Head, Main, NextScript} from 'next/document';
 import React, {type Element} from 'react';
-import {type Context} from 'next';
 import {Helmet} from 'react-helmet';
 
 export default class _document extends Document {
-	static async getInitialProps (...args: Context): Promise<any> {
-		const documentProps = await super.getInitialProps(...args);
-		return {...documentProps, helmet: Helmet.renderStatic()};
+	static async getInitialProps (ctx: DocumentContext): Promise<any> {
+		const initialProps = await Document.getInitialProps(ctx);
+		return {...initialProps, helmet: Helmet.renderStatic()};
 	}
 
 	render (): Element<'html'> {
@@ -21,6 +20,8 @@ export default class _document extends Document {
 			.filter((el: string): boolean => el !== 'htmlAttributes' && el !== 'bodyAttributes')
 			.map((el: string): Element<any> => helmet[el].toComponent());
 
+		// That script tag on the end -- that's a fix for crazy FOUC bug in Chrome
+		// See https://stackoverflow.com/questions/14389566
 		return (
 			// eslint-disable-next-line jsx-a11y/html-has-lang
 			<html {...htmlArgs}>
@@ -39,10 +40,12 @@ export default class _document extends Document {
 						rel='preload'
 						type='font/woff2' />
 					<link href='/favicon.ico' rel='icon' type='image/x-icon' />
+					<link href='https://www.google-analytics.com' rel='preconnect' />
 				</Head>
 				<body {...bodyArgs}>
 					<Main />
 					<NextScript />
+					<script> </script>
 				</body>
 			</html>
 		);
