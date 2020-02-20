@@ -6,10 +6,6 @@ pages
 utils
 releases.js
 
-[lints]
-
-deprecated-utility=off
-
 [options]
 
 # Allow us to bypass Flow warnings via a comment
