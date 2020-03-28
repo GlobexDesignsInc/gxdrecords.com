@@ -2,21 +2,23 @@
 
 export type StoreType = 'Beatport' | 'iTunes' | 'Amazon' | 'Spotify';
 
-export type ReleaseType = {|
+export type ReleaseType = {
 	artist: string,
 	buy: {
-		[key: StoreType]: {|
+		[store_name: StoreType]: {
 			url: string,
-		|},
+		},
+		...
 	},
 	catalog: string,
 	date: string,
 	title: string,
 	tracks: {
-		[key: string]: string,
+		[track_name: string]: string,
+		...
 	},
 	type: string,
-|};
+};
 
 const releases: Array<ReleaseType> = [{
 	artist: 'Evgueni Naverniouk',
