@@ -1,22 +1,23 @@
 // @flow strict
 
 import React, {type Element} from 'react';
+import Image from 'next/image';
 import Releases from '../components/Releases';
 import styles from './index.module.css';
 
 const index = (): Element<'div'> => (
 	<div className={styles.view}>
 		<div className={styles.header}>
-			<img
+			<Image
 				alt='GXD Records'
-				src='/logo.png' />
+				height='165'
+				src='/logo.png'
+				width='196' />
 		</div>
 		<div className={styles.content}>
 			<Releases />
 		</div>
 	</div>
 );
-
-index.displayName = 'index';
 
 export default index;

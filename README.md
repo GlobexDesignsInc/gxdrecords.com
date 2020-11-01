@@ -3,7 +3,7 @@
 > The official website for GXD Records
 
 - Built with `nextjs`
-- Deployed with `now.sh`
+- Deployed with `vercel`
 
 ## Development
 

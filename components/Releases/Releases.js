@@ -2,6 +2,7 @@
 
 import React, {type Element, Fragment} from 'react';
 import releases, {type ReleaseType, type StoreType} from '../../releases';
+import Image from 'next/image';
 import styles from './Releases.module.css';
 
 export const Releases = (): Element<typeof Fragment> => (
@@ -12,7 +13,7 @@ export const Releases = (): Element<typeof Fragment> => (
 		): Element<'div'> => (
 			<div className={styles.release} key={release.catalog}>
 				<div className={styles.left}>
-					<img
+					<Image
 						alt={`${release.artist} - ${release.title}`}
 						height='320'
 						src={`/releases/${release.catalog}.jpg`}
@@ -75,7 +76,5 @@ export const Releases = (): Element<typeof Fragment> => (
 		))}
 	</Fragment>
 );
-
-Releases.displayName = 'Releases';
 
 export default Releases;
