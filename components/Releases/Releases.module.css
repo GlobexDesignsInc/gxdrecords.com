@@ -14,6 +14,13 @@
 	width: 100%;
 }
 
+@media only screen and (max-width: 1280px) {
+	.release {
+		align-items: center;
+		flex-direction: column;
+	}
+}
+
 .left {
 	flex: 0 0 320px;
 	margin-right: 16px;
@@ -61,8 +68,22 @@
 	margin: 0;
 }
 
+@media only screen and (max-width: 1280px) {
+	.releaseName {
+		margin-top: 16px;
+		text-align: center;
+	}
+}
+
 .details {
 	margin: 8px 0 24px;
+}
+
+@media only screen and (max-width: 1280px) {
+	.details {
+		margin-top: 24px;
+		text-align: center;
+	}
 }
 
 .vr {

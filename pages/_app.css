@@ -24,6 +24,9 @@
 		url("/fonts/montserrat-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* stylelint-disable-next-line selector-max-universal */
+* { box-sizing: border-box }
+
 /* stylelint-disable-next-line selector-max-type */
 body {
 	background: #04070B;
