@@ -9,6 +9,7 @@
 		"flow": "flow",
 		"flow-typed:update": "rm -rf flow-typed && flow-typed install --ignoreDeps dev",
 		"packagelint": "prettier-package-json --use-tabs --write ./package.json",
+		"prepare": "husky install",
 		"start": "next start",
 		"stylelint": "stylelint-globex components/**/*.css pages/**/*.css",
 		"test": "yarn flow && yarn eslint && yarn stylelint && yarn packagelint"
