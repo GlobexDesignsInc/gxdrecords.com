@@ -2,6 +2,7 @@
 
 import React, {type Element} from 'react';
 import Image from 'next/image';
+import logoImage from '../public/logo.png';
 import Releases from '../components/Releases';
 import styles from './index.module.css';
 
@@ -11,7 +12,7 @@ const index = (): Element<'div'> => (
 			<Image
 				alt='GXD Records'
 				height='165'
-				src='/logo.png'
+				src={logoImage}
 				width='196' />
 		</div>
 		<div className={styles.content}>
