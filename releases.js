@@ -1,6 +1,6 @@
 // @flow strict
 
-export type StoreType = 'Beatport' | 'iTunes' | 'Amazon' | 'Spotify';
+export type StoreType = 'Amazon' | 'Beatport' | 'iTunes' | 'Spotify';
 
 export type ReleaseType = {
 	artist: string,
