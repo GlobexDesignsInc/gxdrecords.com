@@ -15,19 +15,19 @@
 		"test": "yarn flow && yarn eslint && yarn stylelint && yarn packagelint"
 	},
 	"dependencies": {
-		"next": "11.1.2",
+		"next": "12.0.1",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"react-ga": "3.3.0"
 	},
 	"devDependencies": {
 		"@babel/preset-flow": "7.14.5",
-		"eslint-config-globex": "5.10.0",
+		"eslint-config-globex": "6.0.0-beta.1",
 		"flow-bin": "0.162.1",
 		"flow-typed": "3.4.0",
 		"husky": "7.0.4",
 		"lint-staged": "11.2.6",
 		"prettier-package-json": "2.6.0",
-		"stylelint-config-globex": "2.4.1"
+		"stylelint-config-globex": "3.0.0"
 	}
 }
