@@ -2509,7 +2509,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-ga: 3.3.0
-    stylelint-config-globex: 3.2.0
+    stylelint-config-globex: 3.3.0
   languageName: unknown
   linkType: soft
 
@@ -4644,15 +4644,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-globex@npm:3.2.0":
-  version: 3.2.0
-  resolution: "stylelint-config-globex@npm:3.2.0"
+"stylelint-config-globex@npm:3.3.0":
+  version: 3.3.0
+  resolution: "stylelint-config-globex@npm:3.3.0"
   dependencies:
     stylelint: ^14.4.0
     stylelint-order: ^5.0.0
   bin:
     stylelint-globex: bin/stylelint-globex.js
-  checksum: 4a0adabc6f2ca218de414212243b74af04fd17a0db80bedbcc022774bed4fd451eb21abdfdc1c96a3c80cbda574d31da6c06ba01862bd8611fdf73df99408739
+  checksum: f45f40daa82e75ce04b49c64668a32e3975fd1c6789398465bcd5af3670598485e9530873553bbaee57bb5c06b93a59ba33bebc37303663f9ad1352f5e0f7d5b
   languageName: node
   linkType: hard
 
