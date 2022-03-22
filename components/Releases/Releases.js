@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from './Releases.module.css';
 
 export const Releases = (): Element<typeof Fragment> => (
-	<Fragment>
+	<>
 		<h2 className={styles.title}>Releases</h2>
 		{releases.map((
 			release: ReleaseType
@@ -74,7 +74,7 @@ export const Releases = (): Element<typeof Fragment> => (
 				</div>
 			</div>
 		))}
-	</Fragment>
+	</>
 );
 
 export default Releases;
