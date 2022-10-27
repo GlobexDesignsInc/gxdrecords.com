@@ -1,22 +1,14 @@
-// @flow strict
-
 export type StoreType = 'Amazon' | 'Beatport' | 'iTunes' | 'Spotify';
 
 export type ReleaseType = {
 	artist: string,
-	buy: {
-		[store_name: StoreType]: {
-			url: string,
-		},
-		...
-	},
+	buy: Partial<Record<StoreType, {
+		url: string,
+	}>>,
 	catalog: string,
 	date: string,
 	title: string,
-	tracks: {
-		[track_name: string]: string,
-		...
-	},
+	tracks: Partial<Record<string, string>>,
 	type: string,
 };
 

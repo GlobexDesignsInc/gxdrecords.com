@@ -1,17 +1,12 @@
-// @flow strict
-
-import React, {type Element, Fragment} from 'react';
-import releases, {type ReleaseType, type StoreType} from '../../releases';
-import Image from 'next/future/image';
+import Image from 'next/image';
+import React from 'react';
+import releases from '../../constants/releases';
 import styles from './Releases.module.css';
 
-export const Releases = (): Element<typeof Fragment> => (
+export const Releases = () => (
 	<>
 		<h2 className={styles.title}>Releases</h2>
-		{releases.map((
-			release: ReleaseType,
-			i: number
-		): Element<'div'> => (
+		{releases.map((release, i) => (
 			<div className={styles.release} key={release.catalog}>
 				<div className={styles.left}>
 					<Image
@@ -22,21 +17,19 @@ export const Releases = (): Element<typeof Fragment> => (
 						width='320' />
 
 					<div className={styles.stores}>
-						{Object.keys(release.buy).map((
-							buy: StoreType
-						): Element<'a'> => {
-							const action = buy === 'Spotify' ? 'Stream' : 'Buy';
-							const title = `${action} on ${buy}`;
+						{Object.entries(release.buy).map(([store, value]) => {
+							const action = store === 'Spotify' ? 'Stream' : 'Buy';
+							const title = `${action} on ${store}`;
 
 							return (
 								<a
 									className={styles.button}
-									href={release.buy[buy].url}
-									key={buy}
+									href={value.url}
+									key={store}
 									rel='noopener noreferrer'
 									target='_blank'
 									title={title}>
-									{action} on <strong>{buy}</strong>
+									{action} on <strong>{store}</strong>
 								</a>
 							);
 						})}
@@ -57,10 +50,7 @@ export const Releases = (): Element<typeof Fragment> => (
 
 					<table className={styles.tracks}>
 						<tbody>
-							{Object.keys(release.tracks).map((
-								trackName: string,
-								i: number
-							): Element<'tr'> => (
+							{Object.keys(release.tracks).map((trackName, i) => (
 								<tr
 									className={i % 2 ? styles.trackAlt : styles.track}
 									key={i}>

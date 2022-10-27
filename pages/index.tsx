@@ -1,12 +1,10 @@
-// @flow strict
-
-import React, {type Element} from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import logoImage from '../public/logo.png';
+import React from 'react';
 import Releases from '../components/Releases';
 import styles from './index.module.css';
 
-const index = (): Element<'div'> => (
+const index = () => (
 	<div className={styles.view}>
 		<div className={styles.header}>
 			<Image
