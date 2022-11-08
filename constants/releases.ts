@@ -8,130 +8,175 @@ export type ReleaseType = {
 	catalog: string,
 	date: string,
 	title: string,
-	tracks: Partial<Record<string, string>>,
+	tracks: Array<{duration: string, name: string}>,
 	type: string,
 };
 
 const releases: Array<ReleaseType> = [{
 	artist: 'Evgueni Naverniouk',
-	catalog: 'GXD0001',
-	title: 'Moving Forward',
-	type: 'album',
-	date: '2010-12-05',
-	tracks: {
-		'Moving Forward': '05:30',
-		Reprise: '05:07',
-		Zoology: '04:30',
-		Apóleia: '00:52',
-		'A Game of Cat & Mouse': '04:37',
-		'Itchy Bitchy Spyder': '05:15',
-		'Tea Party': '06:30',
-		'By The Way': '04:28',
-	},
 	buy: {
-		Spotify: {
-			url: 'https://open.spotify.com/album/6ZPFSOyvbCs12SyqEQ8aIv',
+		Beatport: {
+			url: 'http://www.beatport.com/release/moving-forward/883056',
 		},
 		iTunes: {
 			url: 'https://itunes.apple.com/ca/album/moving-forward/1227264741',
 		},
-		Beatport: {
-			url: 'http://www.beatport.com/release/moving-forward/883056',
+		Spotify: {
+			url: 'https://open.spotify.com/album/6ZPFSOyvbCs12SyqEQ8aIv',
 		},
 	},
+	catalog: 'GXD0001',
+	date: '2010-12-05',
+	title: 'Moving Forward',
+	tracks: [{
+		duration: '05:30',
+		name: 'Moving Forward',
+	}, {
+		duration: '05:07',
+		name: 'Reprise',
+	}, {
+		duration: '04:30',
+		name: 'Zoology',
+	}, {
+		duration: '00:52',
+		name: 'Apóleia',
+	}, {
+		duration: '04:37',
+		name: 'A Game of Cat & Mouse',
+	}, {
+		duration: '05:15',
+		name: 'Itchy Bitchy Spyder',
+	}, {
+		duration: '06:30',
+		name: 'Tea Party',
+	}, {
+		duration: '04:28',
+		name: 'By The Way',
+	}],
+	type: 'album',
 }, {
 	artist: 'Evgueni Naverniouk',
-	catalog: 'GXD0002',
-	title: 'Pandemic 2.5 Soundtrack',
-	type: 'ep',
-	date: '2012-05-09',
-	tracks: {
-		'Fragile Existence [Extended Version]': '02:59',
-		Quarantine: '02:09',
-		'Fragile Existence [Game Edit]': '00:48',
-	},
 	buy: {
-		Spotify: {
-			url: 'https://open.spotify.com/album/37dugCepVfj2Hg4SzNd3us',
+		Beatport: {
+			url: 'http://www.beatport.com/release/pandemic-2-5-soundtrack/911464',
 		},
 		iTunes: {
 			url: 'http://itunes.apple.com/ca/album/pandemic-2.5-soundtrack-ep/id525558248',
 		},
-		Beatport: {
-			url: 'http://www.beatport.com/release/pandemic-2-5-soundtrack/911464',
+		Spotify: {
+			url: 'https://open.spotify.com/album/37dugCepVfj2Hg4SzNd3us',
 		},
 	},
+	catalog: 'GXD0002',
+	date: '2012-05-09',
+	title: 'Pandemic 2.5 Soundtrack',
+	tracks: [{
+		duration: '02:59',
+		name: 'Fragile Existence [Extended Version]',
+	}, {
+		duration: '02:09',
+		name: 'Quarantine',
+	}, {
+		duration: '00:48',
+		name: 'Fragile Existence [Game Edit]',
+	}],
+	type: 'ep',
 }, {
 	artist: 'Evgueni Naverniouk',
-	catalog: 'GXD0003',
-	title: 'Scapefall (Original Game Soundtrack)',
-	type: 'ep',
-	date: '2019-08-25',
-	tracks: {
-		Scapefall: '01:28',
-		'Through the Alleys': '02:31',
-		'The Scouring': '04:00',
-		'Chasing the Fox': '03:55',
-	},
 	buy: {
-		Spotify: {
-			url: 'https://open.spotify.com/album/046kM6IAR79ESQBADVLsfn',
+		Amazon: {
+			url: 'https://www.amazon.com/Scapefall-Soundtrack-Evgueni-Naverniouk/dp/B07X5828GB/',
 		},
 		iTunes: {
 			url: 'https://music.apple.com/ca/album/scapefall-original-game-soundtrack-ep/1478500932',
 		},
-		Amazon: {
-			url: 'https://www.amazon.com/Scapefall-Soundtrack-Evgueni-Naverniouk/dp/B07X5828GB/',
+		Spotify: {
+			url: 'https://open.spotify.com/album/046kM6IAR79ESQBADVLsfn',
 		},
 	},
+	catalog: 'GXD0003',
+	date: '2019-08-25',
+	title: 'Scapefall (Original Game Soundtrack)',
+	tracks: [{
+		duration: '01:28',
+		name: 'Scapefall',
+	}, {
+		duration: '02:31',
+		name: 'Through the Alleys',
+	}, {
+		duration: '04:00',
+		name: 'The Scouring',
+	}, {
+		duration: '03:55',
+		name: 'Chasing the Fox',
+	}],
+	type: 'ep',
 }, {
 	artist: 'Evgueni Naverniouk',
-	catalog: 'GXD0004',
-	title: 'Kingdom Keeper (Original Game Soundtrack)',
-	type: 'ep',
-	date: '2019-08-25',
-	tracks: {
-		Entrance: '00:15',
-		Swell: '00:08',
-		'Main Menu': '00:36',
-		'Adventure Theme': '01:22',
-		'Boss Theme': '00:20',
-	},
 	buy: {
-		Spotify: {
-			url: 'https://open.spotify.com/album/4Z2BfCvRrL4pYUIYemZGkv',
+		Amazon: {
+			url: 'https://www.amazon.com/Kingdom-Keeper-Original-Game-Soundtrack/dp/B07X6JKQ43',
 		},
 		iTunes: {
 			url: 'https://music.apple.com/ca/album/kingdom-keeper-original-game-soundtrack-ep/1478500392',
 		},
-		Amazon: {
-			url: 'https://www.amazon.com/Kingdom-Keeper-Original-Game-Soundtrack/dp/B07X6JKQ43',
+		Spotify: {
+			url: 'https://open.spotify.com/album/4Z2BfCvRrL4pYUIYemZGkv',
 		},
 	},
+	catalog: 'GXD0004',
+	date: '2019-08-25',
+	title: 'Kingdom Keeper (Original Game Soundtrack)',
+	tracks: [{
+		duration: '00:15',
+		name: 'Entrance',
+	}, {
+		duration: '00:08',
+		name: 'Swell',
+	}, {
+		duration: '00:36',
+		name: 'Main Menu',
+	}, {
+		duration: '01:22',
+		name: 'Adventure Theme',
+	}, {
+		duration: '00:20',
+		name: 'Boss Theme',
+	}],
+	type: 'ep',
 }, {
 	artist: 'Evgueni Naverniouk',
-	catalog: 'GXD0005',
-	title: 'Pandemic 2 (Original Game Soundtrack)',
-	type: 'ep',
-	date: '2020-01-22',
-	tracks: {
-		'Main Theme': '02:12',
-		Evacuation: '00:45',
-		Fade: '00:02',
-		'Meaty Weeds': '00:06',
-		'Evacuation [Heavy Mix]': '00:45',
-	},
 	buy: {
-		Spotify: {
-			url: 'https://open.spotify.com/album/0v86b9xgHftIkQ7QiZj4IZ',
+		Amazon: {
+			url: 'https://www.amazon.com/Pandemic-2-Original-Game-Soundtrack/dp/B0842Y2SP3',
 		},
 		iTunes: {
 			url: 'https://music.apple.com/ca/album/pandemic-2-original-game-soundtrack-ep/1495855911',
 		},
-		Amazon: {
-			url: 'https://www.amazon.com/Pandemic-2-Original-Game-Soundtrack/dp/B0842Y2SP3',
+		Spotify: {
+			url: 'https://open.spotify.com/album/0v86b9xgHftIkQ7QiZj4IZ',
 		},
 	},
+	catalog: 'GXD0005',
+	date: '2020-01-22',
+	title: 'Pandemic 2 (Original Game Soundtrack)',
+	tracks: [{
+		duration: '02:12',
+		name: 'Main Theme',
+	}, {
+		duration: '00:45',
+		name: 'Evacuation',
+	}, {
+		duration: '00:02',
+		name: 'Fade',
+	}, {
+		duration: '00:06',
+		name: 'Meaty Weeds',
+	}, {
+		duration: '00:45',
+		name: 'Evacuation [Heavy Mix]',
+	}],
+	type: 'ep',
 }].reverse();
 
 export default releases;

@@ -50,15 +50,15 @@ export const Releases = () => (
 
 					<table className={styles.tracks}>
 						<tbody>
-							{Object.keys(release.tracks).map((trackName, i) => (
+							{release.tracks.map(({duration, name}, i) => (
 								<tr
 									className={i % 2 ? styles.trackAlt : styles.track}
 									key={i}>
 									<td className={styles.trackNumber}>
 										{i + 1}
 									</td>
-									<td>{trackName}</td>
-									<td>{release.tracks[trackName]}</td>
+									<td>{name}</td>
+									<td>{duration}</td>
 								</tr>
 							))}
 						</tbody>
