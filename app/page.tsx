@@ -2,15 +2,14 @@ import Image from 'next/image';
 import logoImage from '../public/logo.png';
 import React from 'react';
 import Releases from '../components/Releases';
-import styles from './index.module.css';
+import styles from './page.module.css';
 
-const index = () => (
+const Index = () => (
 	<div className={styles.view}>
 		<div className={styles.header}>
 			<Image
 				alt='GXD Records'
 				height='165'
-				placeholder='blur'
 				src={logoImage}
 				width='196' />
 		</div>
@@ -20,4 +19,4 @@ const index = () => (
 	</div>
 );
 
-export default index;
+export default Index;

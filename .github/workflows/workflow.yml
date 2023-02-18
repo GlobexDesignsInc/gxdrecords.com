@@ -30,13 +30,12 @@ jobs:
         BUILD_ID: ${{ github.sha }}
         ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
       run: >
-        now
+        vercel
         --prod
         --build-env BUILD_ID=${BUILD_ID}
-        --confirm
+        --yes
         --env NODE_ENV=production
         --public
-        --no-clipboard
         --token=${ZEIT_TOKEN}
 
     - name: Verify

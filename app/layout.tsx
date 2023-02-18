@@ -1,16 +1,22 @@
-import './_app.css';
+import './globals.css';
 import {SITE_AUTHOR, SITE_DESC, SITE_NAME} from '../constants/seo';
 import Analytics from '../components/Analytics';
-import type {AppProps} from 'next/app';
-import Head from 'next/head';
 import {Montserrat} from '@next/font/google';
 import React from 'react';
+import styles from './layout.module.css';
 
-const monserrat = Montserrat({subsets: ['latin']});
+type PropsType = {
+	children?: React.ReactNode,
+};
 
-const _app = ({ Component, pageProps }: AppProps) => (
-	<>
-		<Head>
+const monserrat = Montserrat({
+	subsets: ['latin'],
+	variable: '--font-montserrat',
+});
+
+const Layout = ({ children }: PropsType) => (
+	<html className={monserrat.variable} lang='en'>
+		<head>
 			<title>{SITE_NAME}</title>
 			<meta charSet='utf-8' />
 			<meta content='width=device-width,initial-scale=1,shrink-to-fit=no' name='viewport' />
@@ -25,18 +31,13 @@ const _app = ({ Component, pageProps }: AppProps) => (
 			<meta content={SITE_NAME} property='og:site_name' />
 			<meta content={SITE_NAME} property='og:title' />
 			<meta content='website' property='og:type' />
-			<meta content='summary' property='twitter:card' />
-			<meta content={SITE_DESC} property='twitter:description' />
-			<meta content={SITE_NAME} property='twitter:title' />
-			<link href='/favicon.ico' rel='icon' type='image/x-icon' />
 			<link href='https://www.google-analytics.com' rel='preconnect' />
-		</Head>
-		<div className={monserrat.className}>
-			{/* eslint-disable-next-line react/jsx-props-no-spreading */}
-			<Component {...pageProps} />
+		</head>
+		<body className={styles.body}>
+			{children}
 			<Analytics />
-		</div>
-	</>
+		</body>
+	</html>
 );
 
-export default _app;
+export default Layout;
