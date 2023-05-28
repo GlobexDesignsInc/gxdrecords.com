@@ -29,5 +29,6 @@
 		"prettier-package-json": "2.8.0",
 		"stylelint-config-globex": "3.9.0",
 		"typescript": "5.0.4"
-	}
+	},
+	"packageManager": "pnpm@8.6.0"
 }
