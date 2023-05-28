@@ -18,8 +18,11 @@ jobs:
         node-version: '20'
         cache: 'pnpm'
     
-    - name: Install
-      run: pnpm install
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      with:
+        version: 8.6.0
+        run_install: true
     
     - name: Test
       run: pnpm test
