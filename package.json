@@ -13,7 +13,7 @@
 		"typescript": "tsc --noEmit"
 	},
 	"dependencies": {
-		"next": "13.4.9",
+		"next": "13.4.10",
 		"nextjs-google-analytics": "2.3.3",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
