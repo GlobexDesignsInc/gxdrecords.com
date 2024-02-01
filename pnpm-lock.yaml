@@ -32,8 +32,8 @@ devDependencies:
     specifier: 20.11.14
     version: 20.11.14
   '@types/react':
-    specifier: 18.2.48
-    version: 18.2.48
+    specifier: 18.2.50
+    version: 18.2.50
   eslint-config-globex:
     specifier: 7.7.2
     version: 7.7.2(@typescript-eslint/parser@5.62.0)
@@ -353,8 +353,8 @@ packages:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
     dev: true
 
-  /@types/react@18.2.48:
-    resolution: {integrity: sha512-qboRCl6Ie70DQQG9hhNREz81jqC1cs9EVNcjQ1AU+jH6NFfSAhVVbrrY/+nSF+Bsk4AOwm9Qa61InvMCyV+H3w==}
+  /@types/react@18.2.50:
+    resolution: {integrity: sha512-y0XIDJkqp9HynS1VBktZG9mUziHTK5WZTAFDP/UfzSq+poV1drUKsr4VkjMyHTbqMz26BwgLZVYdx/EgPm7EkQ==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
