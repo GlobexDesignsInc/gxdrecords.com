@@ -1,5 +1,5 @@
 .view {
-	background: linear-gradient(#050D0F 0, #10212A 300px, #04070A 800px);
+	background: linear-gradient(#050d0f 0, #10212a 300px, #04070a 800px);
 	display: flex;
 	flex-direction: column;
 	inset: 0;

@@ -1,5 +1,7 @@
-/* stylelint-disable selector-max-type, selector-max-universal */
+* {
+	box-sizing: border-box;
+}
 
-* { box-sizing: border-box }
-
-strong { font-weight: 400 }
+strong {
+	font-weight: 400;
+}

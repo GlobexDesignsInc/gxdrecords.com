@@ -3,13 +3,12 @@
 	"version": "0.4.0",
 	"license": "MIT",
 	"scripts": {
+		"biome:check": "biome check --write",
 		"build": "next build",
-		"dev": "next",
-		"eslint": "eslint-globex .",
+		"dev": "next --turbo",
 		"packagelint": "prettier-package-json --use-tabs --write ./package.json",
 		"start": "next start",
-		"stylelint": "stylelint-globex app/**/*.css components/**/*.css",
-		"test": "pnpm typescript && pnpm eslint && pnpm stylelint && pnpm packagelint",
+		"test": "pnpm biome:check && pnpm packagelint && pnpm typescript",
 		"typescript": "tsc --noEmit"
 	},
 	"dependencies": {
@@ -19,15 +18,12 @@
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
-		"@eslint-config-globex/next": "7.6.4",
-		"@eslint-config-globex/react": "7.7.1",
-		"@eslint-config-globex/typescript": "7.8.0",
-		"@types/node": "20.16.10",
+		"@biomejs/biome": "1.9.2",
+		"@types/node": "22.7.4",
 		"@types/react": "18.3.10",
-		"eslint-config-globex": "7.7.2",
 		"lefthook": "1.7.17",
 		"prettier-package-json": "2.8.0",
-		"stylelint-config-globex": "3.14.1",
 		"typescript": "5.6.2"
-	}
+	},
+	"packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
 }

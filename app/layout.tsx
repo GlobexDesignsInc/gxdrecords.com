@@ -1,12 +1,12 @@
 import './globals.css';
-import Analytics from '../components/Analytics';
 import type { Metadata } from 'next';
-import {Montserrat} from 'next/font/google';
-import React from 'react';
+import { Montserrat } from 'next/font/google';
+import type React from 'react';
+import Analytics from '../components/Analytics/Analytics';
 import styles from './layout.module.css';
 
 type PropsType = {
-	children?: React.ReactNode,
+	children?: React.ReactNode;
 };
 
 const monserrat = Montserrat({
@@ -29,7 +29,7 @@ const SITE_DESC = 'Record label from Vancouver, Canada';
 
 export const metadata: Metadata = {
 	applicationName: SITE_NAME,
-	authors: [{name: SITE_AUTHOR}],
+	authors: [{ name: SITE_AUTHOR }],
 	creator: SITE_AUTHOR,
 	description: SITE_DESC,
 	generator: 'Next.js',

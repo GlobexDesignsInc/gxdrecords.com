@@ -13,13 +13,9 @@ post-rebase:
 pre-commit:
   parallel: true
   commands:
-    stylelint:
-      glob: "*.{css}"
-      run: pnpm stylelint-globex --fix {staged_files}
-      stage_fixed: true
-    eslint:
+    biome:
       glob: "*.{js,jsx,ts,tsx}"
-      run: pnpm eslint-globex --fix {staged_files}
+      run: pnpm biome check --write --unsafe {staged_files}
       stage_fixed: true
     prettier-package-json:
       glob: "package.json"
@@ -28,5 +24,3 @@ pre-commit:
     typescript:
       glob: "*.{ts,tsx}"
       run: pnpm tsc --project ./tsconfig.json --noEmit
-      
-       

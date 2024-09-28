@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import releases from '../../constants/releases';
 import styles from './Releases.module.css';
 
@@ -14,7 +13,8 @@ export const Releases = () => (
 						height='320'
 						priority={i < 2}
 						src={`/releases/${release.catalog}.jpg`}
-						width='320' />
+						width='320'
+					/>
 
 					<div className={styles.stores}>
 						{Object.entries(release.buy).map(([store, value]) => {
@@ -28,7 +28,8 @@ export const Releases = () => (
 									key={store}
 									rel='noopener noreferrer'
 									target='_blank'
-									title={title}>
+									title={title}
+								>
 									{action} on <strong>{store}</strong>
 								</a>
 							);
@@ -38,7 +39,8 @@ export const Releases = () => (
 				<div className={styles.right}>
 					<h3
 						className={styles.releaseName}
-						title={`${release.artist} - ${release.title}`}>
+						title={`${release.artist} - ${release.title}`}
+					>
 						<strong>{release.artist}</strong> - {release.title}
 					</h3>
 
@@ -50,13 +52,12 @@ export const Releases = () => (
 
 					<table className={styles.tracks}>
 						<tbody>
-							{release.tracks.map(({duration, name}, i) => (
+							{release.tracks.map(({ duration, name }, i) => (
 								<tr
 									className={i % 2 ? styles.trackAlt : styles.track}
-									key={i}>
-									<td className={styles.trackNumber}>
-										{i + 1}
-									</td>
+									key={name}
+								>
+									<td className={styles.trackNumber}>{i + 1}</td>
 									<td>{name}</td>
 									<td>{duration}</td>
 								</tr>
