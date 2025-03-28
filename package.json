@@ -14,8 +14,8 @@
 	"dependencies": {
 		"next": "15.2.4",
 		"nextjs-google-analytics": "2.3.7",
-		"react": "19.0.0",
-		"react-dom": "19.0.0"
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
