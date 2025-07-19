@@ -8,4 +8,4 @@ jobs:
     ping:
         runs-on: ubuntu-latest
         steps:
-        - run: curl --silent --show-error --fail https://gxdrecords.com
+        - run: curl --silent --show-error --fail https://www.gxdrecords.com
