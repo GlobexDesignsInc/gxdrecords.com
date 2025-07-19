@@ -8,7 +8,7 @@
 		"dev": "next --turbo",
 		"packagelint": "prettier-package-json --use-tabs --write ./package.json",
 		"start": "next start",
-		"test": "pnpm biome:check && pnpm packagelint && pnpm typescript",
+		"test": "bun biome:check && bun packagelint && bun typescript",
 		"typescript": "tsc --noEmit"
 	},
 	"dependencies": {
@@ -19,11 +19,10 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.2",
-		"@types/node": "22.16.5",
+		"@types/node": "24.0.15",
 		"@types/react": "19.1.8",
 		"lefthook": "1.12.2",
 		"prettier-package-json": "2.8.0",
 		"typescript": "5.8.3"
-	},
-	"packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+	}
 }

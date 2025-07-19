@@ -1,23 +1,23 @@
 .title {
-	border-bottom: 1px solid rgba(0, 198, 164, 0.2);
-	color: #00c6a4;
+	padding: 16px 0;
 	font-size: 32px;
 	font-weight: 300;
-	padding: 16px 0;
+	color: #00c6a4;
+	border-bottom: 1px solid rgba(0, 198, 164, 0.2);
 }
 
 .release {
-	border-bottom: 1px solid rgba(0, 198, 164, 0.2);
 	display: flex;
-	margin-bottom: 16px;
-	padding: 16px 0;
 	width: 100%;
+	padding: 16px 0;
+	margin-bottom: 16px;
+	border-bottom: 1px solid rgba(0, 198, 164, 0.2);
 }
 
 @media only screen and (max-width: 1280px) {
 	.release {
-		align-items: center;
 		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -31,18 +31,18 @@
 }
 
 .button {
-	background: #005763;
-	border-bottom: 1px solid transparent;
-	border-radius: 3px;
-	border-top: 1px solid #6fdadd;
-	color: #fff;
-	cursor: pointer;
 	display: block;
-	margin-bottom: 8px;
 	padding: 8px 18px;
+	margin-bottom: 8px;
+	color: #fff;
 	text-align: center;
 	text-decoration: none;
 	text-shadow: #000 0 1px 1px;
+	cursor: pointer;
+	background: #005763;
+	border-top: 1px solid #6fdadd;
+	border-bottom: 1px solid transparent;
+	border-radius: 3px;
 }
 
 .button:focus,
@@ -53,8 +53,8 @@
 
 .button:active {
 	background: #07626f;
-	border-bottom: 1px solid #097180;
 	border-top: 1px solid transparent;
+	border-bottom: 1px solid #097180;
 }
 
 .right {
@@ -62,10 +62,10 @@
 }
 
 .releaseName {
-	color: #00c6a4;
+	margin: 0;
 	font-size: 24px;
 	font-weight: 300;
-	margin: 0;
+	color: #00c6a4;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -87,13 +87,13 @@
 }
 
 .vr {
-	color: #006874;
 	padding: 0 8px;
+	color: #006874;
 }
 
 .tracks {
-	border-spacing: 0;
 	width: 100%;
+	border-spacing: 0;
 }
 
 .track,
@@ -106,9 +106,9 @@
 }
 
 .trackNumber {
-	color: #005a67;
-	font-size: 24px;
-	padding: 0 8px 0 0;
-	text-align: right;
 	width: 32px;
+	padding: 0 8px 0 0;
+	font-size: 24px;
+	color: #005a67;
+	text-align: right;
 }
