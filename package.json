@@ -14,13 +14,13 @@
 	"dependencies": {
 		"next": "15.5.4",
 		"nextjs-google-analytics": "2.3.7",
-		"react": "19.1.1",
-		"react-dom": "19.1.1"
+		"react": "19.2.0",
+		"react-dom": "19.2.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.4",
 		"@types/node": "24.6.1",
-		"@types/react": "19.1.17",
+		"@types/react": "19.2.0",
 		"@typescript/native-preview": "7.0.0-dev.20251001.1",
 		"lefthook": "1.13.6",
 		"prettier-package-json": "2.8.0",
