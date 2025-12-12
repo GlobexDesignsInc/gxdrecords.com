@@ -56,7 +56,8 @@
 		"rules": {
 			"a11y": {
 				"noAutofocus": "off",
-				"useSemanticElements": "off"
+				"useSemanticElements": "off",
+				"useValidAnchor": "error"
 			},
 			"complexity": {
 				"noUselessStringConcat": "error",
@@ -82,7 +83,6 @@
 			"nursery": {
 				"noFloatingPromises": "error",
 				"noImportCycles": "warn",
-				"useAnchorHref": "error",
 				"useSortedClasses": "error"
 			},
 			"performance": {
